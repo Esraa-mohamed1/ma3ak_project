@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     _navigateToNextScreen();
   }
   Future<void> _navigateToNextScreen()async{
-    final prefs = await SharedPreferences.getInstance();
+   final prefs = await SharedPreferences.getInstance();
     final onboarding =prefs.getBool('onboarding')?? false;
     Timer(Duration(seconds: 3),() => Navigator.pushReplacementNamed(context,
         (onboarding? RoutesName.login:RoutesName.onboarding)));
@@ -38,3 +38,4 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
+// esraa
